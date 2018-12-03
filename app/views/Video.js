@@ -25,4 +25,21 @@ export class Video extends React.Component {
         })
         .catch(error => console.log(error))
     }
+
+    render () {
+        return (
+            <View>
+                {
+                    this.state.listLoaded && (
+                        <View style={{paddingTop: 30}}>
+                          <FlatList
+                             data= {this.state.videoList}
+                             renderItem
+                          />
+                        </View>
+                    )
+                }
+            </View>
+        )
+    }
 }

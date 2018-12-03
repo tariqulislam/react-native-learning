@@ -2,6 +2,7 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import {Home}from '../views/Home';
 import {Contact} from '../views/Contact';
+import {Video} from '../views/Video';
 
 export const AppRoute = createStackNavigator({
   HomeRT: {
@@ -19,6 +20,13 @@ export const AppRoute = createStackNavigator({
     }
 
   },
+  VideoRT: {
+    screen: Video,
+    navigationOptions: {
+      title: 'Video page',
+      header: null
+    }
+  }
 },
 {
   initialRouteName: 'HomeRT'
